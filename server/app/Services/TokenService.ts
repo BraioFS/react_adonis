@@ -1,5 +1,5 @@
 import Token from "App/Models/Token";
-import throwError from "App/Utils/ThrowErrorUtils";
+import throwGenericError from "App/Utils/ThrowGenericErrorUtils";
 
 export default class TokenService {
 
@@ -8,18 +8,16 @@ export default class TokenService {
             const listaToken = await Token.query();
             return listaToken;
         } catch (error) {
-            console.log("file: TokenService.ts:10 ~ TokenService ~ buscarTokens ~ error:", error)
-            throw new Error("Erro ao buscar contato");
+            throwGenericError('Erro ao buscar contato', error);
         }
     }
 
-    public async buscarContatoPorUsuario(request) {
+    public async buscarTokenPorId(id:number) {
         try {
-            const token = await Token.query().where('id', request.id).first();
+            const token = await Token.query().where('id', id).first();
             return token;
         } catch (error) {
-            console.log("Erro: ", error)
-            throw new Error("Erro ao buscar contato");
+            throwGenericError('Ocorreu um erro ao buscar o token', error);
         }
     }
 
@@ -36,7 +34,7 @@ export default class TokenService {
             );
             return token;
         } catch (error) {
-            throwError('Erro ao salvar: ' + error.message);
+            throwGenericError('Ocorreu um erro ao salvar o token', error);
         }
     }
 }

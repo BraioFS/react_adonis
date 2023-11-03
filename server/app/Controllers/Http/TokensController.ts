@@ -9,8 +9,13 @@ export default class TokensController {
         return resposta;
     }
 
-    public async buscarContatoPorUsuario(request) {
-        const resposta = await contatoService.buscarContatoPorUsuario(request);
+    public async buscarTokenPorId({ params }) {
+        const resposta = await tokenService.buscarTokenPorId(params.id);
+        return resposta;
+    }
+
+    public async salvarToken(request) {
+        const resposta = await tokenService.salvarToken(request);
         return resposta;
     }
 }
