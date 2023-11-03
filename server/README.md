@@ -38,3 +38,4 @@ npm run dev
 
 # Obs
 Se estiver usando o DBeaver para conexão local ir até opções avançadas da conexão e ativar "Usar SSL"
+Siga padronização de pastas ja existentes
