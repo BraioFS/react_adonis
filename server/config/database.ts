@@ -25,29 +25,29 @@ const databaseConfig: DatabaseConfig & { orm: Partial<OrmConfig> } = {
   connections: {
     /*
     |--------------------------------------------------------------------------
-    | PostgreSQL config
+    | MySQL config
     |--------------------------------------------------------------------------
     |
-    | Configuration for PostgreSQL database. Make sure to install the driver
+    | Configuration for MySQL database. Make sure to install the driver
     | from npm when using this connection
     |
-    | npm i pg
+    | npm install mysql
     |
     */
-    pg: {
-      client: 'pg',
+    mysql: {
+      client: 'mysql',
       connection: {
-        host: Env.get('PG_HOST'),
-        port: Env.get('PG_PORT'),
-        user: Env.get('PG_USER'),
-        password: Env.get('PG_PASSWORD', ''),
-        database: Env.get('PG_DB_NAME'),
+        host: Env.get('MYSQL_HOST'),
+        port: Env.get('MYSQL_PORT'),
+        user: Env.get('MYSQL_USER'),
+        password: Env.get('MYSQL_PASSWORD', ''),
+        database: Env.get('MYSQL_DB_NAME'),
       },
       healthCheck: false,
-			debug: false,
+      debug: false,
     },
-
   },
+  
 
   /*
   |--------------------------------------------------------------------------

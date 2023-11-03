@@ -1,3 +1,11 @@
-// import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
+import TokenService from "App/Services/TokenService";
 
-export default class TokensController {}
+const tokenService = new TokenService();
+
+export default class TokensController {
+
+    public async buscarTokens() {
+        const resposta = await tokenService.buscarTokens();
+        return resposta;
+    }
+}
