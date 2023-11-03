@@ -1,5 +1,6 @@
 import { DateTime } from "luxon";
-import { BaseModel, column } from "@ioc:Adonis/Lucid/Orm";
+import { BaseModel, column, BelongsTo, belongsTo  } from '@ioc:Adonis/Lucid/Orm'
+import Url from "./Url";
 
 export default class Token extends BaseModel {
   public static table = "tokens";
@@ -11,7 +12,7 @@ export default class Token extends BaseModel {
   public key: string;
 
   @column()
-  public url: string;
+  public url_id: number;
 
   @column()
   public name: string;
@@ -21,4 +22,11 @@ export default class Token extends BaseModel {
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime;
+
+  @belongsTo(() => Url, 
+  { 
+    foreignKey: 'id', 
+    localKey: 'url_id' 
+  })
+  public profile: BelongsTo<typeof Url>
 }

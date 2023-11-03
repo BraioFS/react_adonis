@@ -1,16 +1,13 @@
 import BaseSchema from '@ioc:Adonis/Lucid/Schema'
 
-export default class Users extends BaseSchema {
-  protected tableName = 'users'
+export default class Urls extends BaseSchema {
+  protected tableName = 'urls'
 
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
       table.string('name')
-      table.string('email')
-      table.string('password')
-      table.integer('profile_id')
-      table.integer('url_id')
+      table.integer('type_id')
       table.timestamps(true)
     })
   }

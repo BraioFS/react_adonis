@@ -6,9 +6,9 @@ export default class Tokens extends BaseSchema {
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
-      table.text('key')
-      table.text('url')
       table.text('name')
+      table.text('key')
+      table.integer('url_id')
       table.timestamps(true,true)
     })
   }

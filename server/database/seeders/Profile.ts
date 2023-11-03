@@ -10,7 +10,7 @@ export default class ProfileSeeder extends BaseSeeder {
 
     await Profile.create({
       id: 2,
-      name: 'ADMIN'
+      name: 'ADMINISTRADOR'
     });
   }
 }
