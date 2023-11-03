@@ -8,4 +8,9 @@ export default class TokensController {
         const resposta = await tokenService.buscarTokens();
         return resposta;
     }
+
+    public async buscarContatoPorUsuario(request) {
+        const resposta = await contatoService.buscarContatoPorUsuario(request);
+        return resposta;
+    }
 }
