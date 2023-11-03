@@ -25,5 +25,10 @@ Route.get('/', async () => {
 })
 
 Route.group(() => {
-  // Route.post('enviar-mensagem-ultramsg', 'MensagemController.enviarMensagemUltraMsg')
+  /*--Token--*/
+   Route.get('fetch-tokens', 'TokensController.fetchTokens')
+   Route.get('fetch-token-by-id/:id', 'TokensController.findTokenById')
+   Route.get('fetch-token-by-name/:name', 'TokensController.findTokenByName')
+   Route.post('save-token', 'TokensController.saveToken')
+   Route.delete('delete-token-by-id/:id', 'TokensController.deleteTokenById')
 }).prefix('api')
