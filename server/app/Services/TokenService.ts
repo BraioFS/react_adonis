@@ -32,12 +32,12 @@ export default class TokenService {
 
     public async saveToken({ request }) {
         try {
-            const { key, url, name } = request.all();
+            const { key, url_id, name } = request.all();
             await Token.updateOrCreate(
                 { key },
                 {
                     key,
-                    url,
+                    url_id,
                     name,
                 }
             );
