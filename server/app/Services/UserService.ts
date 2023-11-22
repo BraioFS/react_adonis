@@ -12,12 +12,21 @@ export default class UserService {
         }
     }
 
-    public async findUSerById(id:number) {
+    public async findUserById(id:number) {
         try {
             const user = await User.query().where('id', id).first();
             return user;
         } catch (error) {
             throwGenericError('An error occurred while finding the user by id', error);
+        }
+    }
+
+    public async findUserByName(name:string) {
+        try {
+            const token = await User.query().where('name', name).first();
+            return token;
+        } catch (error) {
+            throwGenericError('An error occurred while finding the token by name', error);
         }
     }
 

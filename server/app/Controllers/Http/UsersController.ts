@@ -8,8 +8,13 @@ export default class UsersController {
     return response;
 }
 
-public async findUSerById({ params }) {
-    const response = await userService.findUSerById(params.id);
+public async findUserById({ params }) {
+    const response = await userService.findUserById(params.id);
+    return response;
+}
+
+public async findUserByName({ params }) {
+    const response = await userService.findUserByName(params.name);
     return response;
 }
 
