@@ -8,6 +8,7 @@ export default class Contents extends BaseSchema {
       table.increments('id')
       table.string('name')
       table.integer('url_id')
+      table.integer('subject_id')
       table.timestamps(true)
     })
   }

@@ -1,4 +1,4 @@
-import ProfileService from "App/Services/ProfileService";
+import ProfileService from 'App/Services/ProfileService';
 
 const profileService = new ProfileService();
 
