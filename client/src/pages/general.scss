@@ -155,6 +155,7 @@ body {
   border: none;
   border-radius: $simple-border-radius;
   box-shadow: $box-shadow;
+  color: $white !important;
 
   &:hover {
     background-color: $white !important;

@@ -6,17 +6,25 @@ const LinkComponent = ({
   altText,
   title,
   to,
-  fontColor,
+  hoverFontColor,
   hoverImageSource,
   initialBackgroundColor,
 }) => {
   const [imageSource, setImageSource] = useState(initialImageSource);
+  const [fontColor, setFontColor] = useState("var(--white)"); // Adicionei o estado para a cor da fonte
+
 
   return (
     <div
       className="col-12 box"
-      onMouseEnter={() => setImageSource(hoverImageSource)}
-      onMouseLeave={() => setImageSource(initialImageSource)}
+      onMouseEnter={() => {
+        setImageSource(hoverImageSource);
+        setFontColor(hoverFontColor);
+      }}
+      onMouseLeave={() => {
+        setImageSource(initialImageSource);
+        setFontColor("var(--white)");
+      }}
       style={{ backgroundColor: initialBackgroundColor }}
     >
       <Link to={to} className="invisible-link">
@@ -24,7 +32,7 @@ const LinkComponent = ({
           <img src={imageSource} alt={altText} className="card-img-top" />
         </div>
         <div className="col-12">
-          <h3 style={{ color: fontColor, fontWeight: "bolder", marginTop: "0"  }}>{title}</h3>
+          <h3 style={{ color: fontColor, fontWeight: "bolder", marginTop: "0" }}>{title}</h3>
         </div>
       </Link>
     </div>

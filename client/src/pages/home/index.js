@@ -26,7 +26,7 @@ export default function Home() {
               altText="front"
               title="Front-end"
               to="/front"
-              fontColor={bodyColor}
+              hoverFontColor="var(--blue)"
               initialBackgroundColor="var(--blue)"
             />
           </div>
@@ -42,7 +42,7 @@ export default function Home() {
               altText="front"
               title="Back-end"
               to="/front"
-              fontColor={bodyColor}
+              hoverFontColor="var(--black-light)"
               initialBackgroundColor="var(--black-light)"
             />
           </div>
@@ -58,7 +58,7 @@ export default function Home() {
               altText="front"
               title="Mobile"
               to="/front"
-              fontColor={bodyColor}
+              hoverFontColor="var(--green)"
               initialBackgroundColor="var(--green)"
             />
           </div>
@@ -74,7 +74,7 @@ export default function Home() {
               altText="front"
               title="Banco de dados"
               to="/front"
-              fontColor={bodyColor}
+              hoverFontColor="var(--gray-dark)"
               initialBackgroundColor="var(--gray-dark)"
             />
           </div>
@@ -90,7 +90,7 @@ export default function Home() {
               altText="front"
               title="Design"
               to="/front"
-              fontColor={bodyColor}
+              hoverFontColor="var(--purple)"
               initialBackgroundColor="var(--purple)"
             />
           </div>
