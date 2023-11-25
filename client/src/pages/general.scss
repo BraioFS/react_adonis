@@ -1,0 +1,184 @@
+/* Fonts */
+$font-family: "Montserrat", sans-serif;
+
+/* Fonts size */
+$large-font-size: 18px;
+$medium-font-size: 16px;
+$small-font-size: 14px;
+
+/* Fonts bold */
+$bolder-font: 700px;
+$semi-bolder-font-bold: 550px;
+$medium-font-bold: 400px;
+$light-font-bold: 200px;
+
+/* Transitions */
+$transition-lazy: all ease-in-out 0.5s;
+$transition: all ease-in-out 0.3s;
+$transition-fast: all ease-in-out 0.1s;
+
+/* box shadows */
+$box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+
+/* Colors */
+$white-darklight: #ebebeb;
+$white: #ececec;
+$white-light: #eeeeee;
+$gray-dark: #999999;
+$gray: #bbbbbb;
+$gray-light: #D0D1D3;
+$black-dark: #000000;
+$black: #101010;
+$black-light: #353535;
+$blue-dark: #1a3043;
+$blue: #229be1;
+$blue-light: #98c3ed;
+$green-dark: #329654;
+$green: #44ca71;
+$green-light: #45ff83;
+$red-dark: #812323;
+$red: #ce3838;
+$red-light: #ff4545;
+$orange-dark: #b2512e;
+$orange: #fe7341;
+$orange-light: #ff8c41;
+$yellow-dark: #b2a72c;
+$yellow: #ffef40;
+$yellow-light: #f5ff40;
+$purple-dark: #8450b5;
+$purple: #aa67e9;
+$purple-light: #c370ff;
+
+:root {
+  --white-darklight: #{$white-darklight};
+  --white: #{$white};
+  --white-light: #{$white-light};
+  --gray-dark: #{$gray-dark};
+  --gray: #{$gray};
+  --gray-light: #{$gray-light};
+  --black-dark: #{$black-dark};
+  --black: #{$black};
+  --black-light: #{$black-light};
+  --blue-dark: #{$blue-dark};
+  --blue: #{$blue};
+  --blue-light: #{$blue-light};
+  --green-dark: #{$green-dark};
+  --green: #{$green};
+  --green-light: #{$green-light};
+  --red-dark: #{$red-dark};
+  --red: #{$red};
+  --red-light: #{$red-light};
+  --orange-dark: #{$orange-dark};
+  --orange: #{$orange};
+  --orange-light: #{$orange-light};
+  --yellow-dark: #{$yellow-dark};
+  --yellow: #{$yellow};
+  --yellow-light: #{$yellow-light};
+  --purple-dark: #{$purple-dark};
+  --purple: #{$purple};
+  --purple-light: #{$purple-light};
+}
+
+/* Border radius */
+$curved-border-radius: 12px;
+$normal-border-radius: 8px;
+$simple-border-radius: 5px;
+
+* {
+  font-family: $font-family;
+  font-size: $medium-font-size;
+  transition: $transition;
+}
+
+button {
+  text-align: center;
+  background: transparent;
+  height: 35px;
+  width: 83px;
+  border: none;
+  border-radius: $normal-border-radius;
+  color: $black;
+  background-color: $white-light;
+  font-weight: $bolder-font;
+
+  &:hover {
+    transform: scale(1.05);
+    outline: none;
+    transition: $transition;
+  }
+}
+
+input {
+  text-align: left;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  border-radius: $normal-border-radius;
+  font-weight: $semi-bolder-font-bold;
+  width: 300px;
+  height: 35px;
+  padding: 10px;
+  background: $white;
+  transition: $transition-fast;
+
+  &:hover,
+  &:focus {
+    background-color: $gray-light;
+  }
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  transition: $transition;
+  user-select: none;
+  //background-image: url(../assets/images/backDarth);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  justify-content: space-around !important;
+  text-align: center;
+  height: 200px;
+  min-width: 200px;
+  outline: none;
+  border: none;
+  border-radius: $simple-border-radius;
+  box-shadow: $box-shadow;
+
+  &:hover {
+    background-color: $white !important;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+img {
+  border-radius: $normal-border-radius;
+  width: 150px !important;
+  height: 150px !important;
+  -webkit-user-drag: none;
+}
+
+.invisible-link {
+  text-decoration: none !important;
+  color: $white;
+
+  &h3{
+   margin: 0; 
+  }
+}
