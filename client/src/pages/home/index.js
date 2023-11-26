@@ -1,10 +1,14 @@
 import { useState } from "react";
-import back from "../../assets/images/csharp.png";
-import tsAzul from "../../assets/images/ts_icon.png";
-import tsBranco from "../../assets/images/ts_branco.png";
-import mobile from "../../assets/images/android_icon.png";
-import design from "../../assets/images/ux.png";
-import banco from "../../assets/images/banco_icon.png";
+import frontHover from "../../assets/images/ts_icon.png";
+import frontInitial from "../../assets/images/ts_branco.png";
+import backHover from "../../assets/images/java_white.png";
+import backInitial from "../../assets/images/java_dark.png";
+import mobileHover from "../../assets/images/flutter.png";
+import mobileInital from "../../assets/images/flutter_dark.png";
+import designHover from "../../assets/images/figma.png";
+import designInitial from "../../assets/images/figma_dark.png";
+import databaseHover from "../../assets/images/sqlite.png";
+import databaseInitial from "../../assets/images/sqlite_dark.png";
 import "../general.scss";
 import LinkComponent from "../../components/LinkComponents";
 
@@ -21,8 +25,8 @@ export default function Home() {
             onMouseLeave={() => setBodyColor("var(--white-light)")}
           >
             <LinkComponent
-              initialImageSource={tsBranco}
-              hoverImageSource={tsAzul}
+              initialImageSource={frontInitial}
+              hoverImageSource={frontHover}
               altText="front"
               title="Front-end"
               to="/front"
@@ -37,8 +41,8 @@ export default function Home() {
             onMouseLeave={() => setBodyColor("var(--white-light)")}
           >
             <LinkComponent
-              initialImageSource={back}
-              hoverImageSource={tsAzul}
+              initialImageSource={backHover}
+              hoverImageSource={backInitial}
               altText="front"
               title="Back-end"
               to="/front"
@@ -53,8 +57,8 @@ export default function Home() {
             onMouseLeave={() => setBodyColor("var(--white-light)")}
           >
             <LinkComponent
-              initialImageSource={mobile}
-              hoverImageSource={tsAzul}
+              initialImageSource={mobileInital}
+              hoverImageSource={mobileHover}
               altText="front"
               title="Mobile"
               to="/front"
@@ -69,8 +73,8 @@ export default function Home() {
             onMouseLeave={() => setBodyColor("var(--white-light)")}
           >
             <LinkComponent
-              initialImageSource={banco}
-              hoverImageSource={tsAzul}
+              initialImageSource={databaseInitial}
+              hoverImageSource={databaseHover}
               altText="front"
               title="Banco de dados"
               to="/front"
@@ -85,8 +89,8 @@ export default function Home() {
             onMouseLeave={() => setBodyColor("var(--white-light)")}
           >
             <LinkComponent
-              initialImageSource={design}
-              hoverImageSource={tsAzul}
+              initialImageSource={designInitial}
+              hoverImageSource={designHover}
               altText="front"
               title="Design"
               to="/front"

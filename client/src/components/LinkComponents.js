@@ -11,7 +11,7 @@ const LinkComponent = ({
   initialBackgroundColor,
 }) => {
   const [imageSource, setImageSource] = useState(initialImageSource);
-  const [fontColor, setFontColor] = useState("var(--white)"); // Adicionei o estado para a cor da fonte
+  const [fontColor, setFontColor] = useState("var(--white)");
 
 
   return (
