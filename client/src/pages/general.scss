@@ -27,7 +27,7 @@ $white: #ececec;
 $white-light: #eeeeee;
 $gray-dark: #999999;
 $gray: #bbbbbb;
-$gray-light: #D0D1D3;
+$gray-light: #d0d1d3;
 $black-dark: #000000;
 $black: #101010;
 $black-light: #353535;
@@ -161,7 +161,7 @@ body {
     border-radius: $normal-border-radius;
     font-weight: $semi-bolder-font-bold;
     width: 500px;
-    height: 35px;
+    height: 25px;
     padding: 10px;
     background: $gray-light;
     transition: $transition-fast;
@@ -189,13 +189,26 @@ body {
     color: $black;
     background-color: $white-light;
     font-weight: $bolder-font;
-  
+
     &:hover {
       transform: scale(1.05);
       outline: none;
       transition: $transition;
     }
   }
+}
+
+.tooltip {
+  transform: scale(1.05);
+  outline: none;
+  transition: $transition;
+  background-color: $black-light !important;
+  color: $white;
+  cursor: pointer;
+}
+
+.icon {
+  margin-bottom: 2px;
 }
 
 .container {
@@ -238,7 +251,7 @@ img {
   text-decoration: none !important;
   color: $white;
 
-  &h3{
-   margin: 0; 
+  &h3 {
+    margin: 0;
   }
 }

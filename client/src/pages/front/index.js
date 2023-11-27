@@ -1,4 +1,3 @@
-import { useState } from "react";
 /*Logos*/
 import frontHover from "../../assets/images/ts_icon.png";
 import frontInitial from "../../assets/images/ts_branco.png";
