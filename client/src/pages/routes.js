@@ -1,66 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 /* Page principal */
 import Home from './home';
-// import Back from './back';
-// import Front from './front';
-// import Erro from './erro';
-// import Mobile from './mobile';
-// import Banco from './banco';
-// import Design from './design';
-// /* front */
-// import TypeScript from './front/typescript';
-// import Html from './front/html';
-// import JavaScript from './front/javascript';
-// import Angular from './front/angular';
-// import React from './front/react';
-// import Bootstrap from './front/bootstrap';
-// /* Back */
-// import Postman from './back/postman';
-// import Spring from './back/spring';
-// import Swagger from './back/swagger';
-// import Java from './back/java';
-// import Python from './back/python';
-// import CSharp from './back/csharp';
-// /* Mobile */
-// import Android from './mobile/android';
-// import Flutter from './mobile/flutter';
-// import Ionic from './mobile/ionic';
-// import ReactNative from './mobile/reactNative';
-// import Xamarin from './mobile/xamarin';
-// import Xcode from './mobile/xcode';
-// /* Banco */
-// import Heid from './banco/heid';
-// import Oracle from './banco/oracle';
-// import Pgadmin from './banco/pgadmin';
-// import Mysql from './banco/mysql';
-// import Sqlite from './banco/sqlite';
-// import Mongodb from './banco/mongodb';
-// /* Design */
-// import Figma from './design/figma';
-// import Canva from './design/canva';
-// import Illustrator from './design/illustrator';
-// import Invision from './design/invision';
-// import Sketch from './design/sketch';
-// import Adobephotoshop from './design/adobephotohop';
-// /* Login */
-// import Login from './login'
-// import AutoCadastro from "./autoCadastro";
-// /* Histórico */
-// import Historico from './components/historico';
-// import Private from './private'
+import Front from './front';
 
 export default function RoutesAPP(){
     return(
         <Routes>
-            {/* tela login */}
-            {/* <Route path="/login" element={<Login/>}/> 
-            <Route path="/auto-cadastro" element={<AutoCadastro/>}/> */}
 
             {/* Rotas principais */}
             <Route path="/" element={<Home/>}/>
+            <Route path="/front-home" element={<Front/>}/>  
             {/* <Route path="*" element={<Erro/>}/>
-            <Route path="/back" element={<Back/>}/>
-            <Route path="/front" element={<Front/>}/>   
+            <Route path="/back" element={<Back/>}/> 
             <Route path="/mobile" element={<Mobile/>}/>   
             <Route path="/banco" element={<Banco/>}/>   
             <Route path="/design" element={<Design/>}/>    */}
@@ -104,9 +55,6 @@ export default function RoutesAPP(){
             <Route path="/invision" element={<Invision/>}/>   
             <Route path="/sketch" element={<Sketch/>}/>   
             <Route path="/adobephotoshop" element={<Adobephotoshop/>}/> */}
-
-            {/* Private */}
-            {/* <Route path="/historico" element={<Private><Historico/></Private>}/> */}
         </Routes>
     );
 }

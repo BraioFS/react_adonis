@@ -13,12 +13,13 @@ $medium-font-bold: 400px;
 $light-font-bold: 200px;
 
 /* Transitions */
-$transition-lazy: all ease-in-out 0.5s;
+$transition-lazy: all ease-in-out 0.4s;
 $transition: all ease-in-out 0.3s;
 $transition-fast: all ease-in-out 0.1s;
 
 /* box shadows */
 $box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+$box-shadow-header: 0 5px 5px rgba(0, 0, 0, 0.15);
 
 /* Colors */
 $white-darklight: #ebebeb;
@@ -87,7 +88,7 @@ $simple-border-radius: 5px;
 * {
   font-family: $font-family;
   font-size: $medium-font-size;
-  transition: $transition;
+  transition: $transition-lazy;
 }
 
 button {
@@ -136,7 +137,65 @@ body {
   overflow-x: hidden;
   transition: $transition;
   user-select: none;
-  //background-image: url(../assets/images/backDarth);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $white-light;
+  color: $black-light;
+  padding: 10px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: $box-shadow-header;
+
+  input {
+    text-align: left;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    border-radius: $normal-border-radius;
+    font-weight: $semi-bolder-font-bold;
+    width: 500px;
+    height: 35px;
+    padding: 10px;
+    background: $gray-light;
+    transition: $transition-fast;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:hover,
+    &:focus {
+      background-color: $gray;
+    }
+
+    &::placeholder {
+      color: $black-light;
+    }
+  }
+
+  button {
+    text-align: center;
+    background: transparent;
+    height: 35px;
+    width: 83px;
+    margin: 0 20px;
+    border: none;
+    border-radius: $normal-border-radius;
+    color: $black;
+    background-color: $white-light;
+    font-weight: $bolder-font;
+  
+    &:hover {
+      transform: scale(1.05);
+      outline: none;
+      transition: $transition;
+    }
+  }
 }
 
 .container {

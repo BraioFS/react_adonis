@@ -1,30 +1,26 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const LinkComponent = ({
+const CardComponent = ({
   initialImageSource,
   altText,
   title,
   to,
-  hoverFontColor,
+  fontColor,
   hoverImageSource,
-  initialBackgroundColor,
 }) => {
   const [imageSource, setImageSource] = useState(initialImageSource);
-  const [fontColor, setFontColor] = useState("var(--white)");
 
   return (
     <div
       className="col-12 box"
       onMouseEnter={() => {
         setImageSource(hoverImageSource);
-        setFontColor(hoverFontColor);
       }}
       onMouseLeave={() => {
         setImageSource(initialImageSource);
-        setFontColor("var(--white)");
       }}
-      style={{ backgroundColor: initialBackgroundColor }}
+      style={{ backgroundColor: "var(--white-light)" }}
     >
       <Link to={to} className="invisible-link">
         <div className="col-12">
@@ -42,4 +38,4 @@ const LinkComponent = ({
   );
 };
 
-export default LinkComponent;
+export default CardComponent;
