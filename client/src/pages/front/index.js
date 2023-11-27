@@ -47,7 +47,7 @@ export default function Front() {
               initialImageSource={frontInitial}
               hoverImageSource={frontHover}
               altText="typescript"
-              title="Typescript"
+              title="Css"
               to="/typescript-page"
               fontColor={colorGray}
             />
@@ -57,7 +57,7 @@ export default function Front() {
               initialImageSource={frontInitial}
               hoverImageSource={frontHover}
               altText="javascript"
-              title="Javascript"
+              title="Css"
               to="/javascript-page"
               fontColor={colorPurple}
             />

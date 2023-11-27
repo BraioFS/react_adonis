@@ -198,15 +198,6 @@ body {
   }
 }
 
-.tooltip {
-  transform: scale(1.05);
-  outline: none;
-  transition: $transition;
-  background-color: $black-light !important;
-  color: $white;
-  cursor: pointer;
-}
-
 .icon {
   margin-bottom: 2px;
 }
