@@ -7,10 +7,10 @@ $medium-font-size: 16px;
 $small-font-size: 14px;
 
 /* Fonts bold */
-$bolder-font: 700px;
-$semi-bolder-font-bold: 550px;
-$medium-font-bold: 400px;
-$light-font-bold: 200px;
+$bolder-font: 700; 
+$semi-bolder-font-bold: 550;
+$medium-font-bold: 400;
+$light-font-bold: 200;
 
 /* Transitions */
 $transition-lazy: all ease-in-out 0.4s;
@@ -198,10 +198,6 @@ body {
   }
 }
 
-.icon {
-  margin-bottom: 2px;
-}
-
 .container {
   display: flex;
   justify-content: center;
@@ -245,4 +241,14 @@ img {
   &h3 {
     margin: 0;
   }
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-icon{
+  margin-bottom: -2px;
+  margin-left: -35px;
 }

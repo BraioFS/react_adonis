@@ -14,7 +14,14 @@ const Header = () => {
     return !pathsToHideHeader.includes(location.pathname);
   };
 
-  const [BackButton, HomeButton, LoginButton] = ButtonComponent();
+  const handleClearClick = () => {
+    console.log("Aqui");
+    setSearchTerm("");
+    const instance = new Mark(document.body);
+    instance.unmark();
+  };
+
+  const [BackButton, HomeButton, LoginButton, ClearButton, SearchButton] = ButtonComponent();
   const back = <BackButton />;
   const home = <HomeButton />;
   const login = <LoginButton />;
@@ -47,17 +54,20 @@ const Header = () => {
   return shouldShowHeader() ? (
     <div className="header">
       <div>{back}</div>
-      <div>
+      <div className="search-container">
         <input
           type="text"
           placeholder="Pesquise algo..."
-          style={{
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
           value={searchTerm}
           onChange={handleSearchChange}
         />
+        <div>
+          {searchTerm ? (
+            <ClearButton onClick={handleClearClick} />
+          ) : (
+            <SearchButton />
+          )}
+        </div>
       </div>
       <div>
         {home}
@@ -65,6 +75,7 @@ const Header = () => {
       </div>
     </div>
   ) : null;
+  
 };
 
 export default Header;

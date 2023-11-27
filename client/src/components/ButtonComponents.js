@@ -1,5 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import { FaAngleLeft,FaHouse, FaUserGraduate } from "react-icons/fa6";
+import {
+  FaAngleLeft,
+  FaHouse,
+  FaUserGraduate,
+  FaXmark,
+  FaMagnifyingGlass,
+} from "react-icons/fa6";
 import { Tooltip } from "react-tippy";
 import "react-toastify/dist/ReactToastify.css";
 import "../pages/general.scss";
@@ -24,7 +30,7 @@ export const ButtonComponent = () => {
   const BackButton = () => (
     <Tooltip title="Voltar" position={positionbottom} trigger={triggerEnter}>
       <button onClick={handleBackButtonClick}>
-        <FaAngleLeft size={20} className="icon" />{" "}
+        <FaAngleLeft size={20} />{" "}
       </button>
     </Tooltip>
   );
@@ -32,7 +38,7 @@ export const ButtonComponent = () => {
   const HomeButton = () => (
     <Tooltip title="Home" position={positionbottom} trigger={triggerEnter}>
       <button onClick={handleHomeButtonClick}>
-        <FaHouse size={20} className="icon" />{" "}
+        <FaHouse size={20} />{" "}
       </button>
     </Tooltip>
   );
@@ -40,10 +46,18 @@ export const ButtonComponent = () => {
   const LoginButton = () => (
     <Tooltip title="Login" position={positionbottom} trigger={triggerEnter}>
       <button onClick={handleLoginButtonClick}>
-        <FaUserGraduate size={20} className="icon" />{" "}
+        <FaUserGraduate size={20} />{" "}
       </button>
     </Tooltip>
   );
 
-  return [BackButton, HomeButton, LoginButton];
+  const ClearButton = ({ onClick }) => (
+    <FaXmark size={20} className="search-icon" onClick={onClick} />
+  );
+
+  const SearchButton = () => (
+    <FaMagnifyingGlass size={20} className="search-icon" />
+  );
+
+  return [BackButton, HomeButton, LoginButton, ClearButton, SearchButton];
 };
