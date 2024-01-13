@@ -28,7 +28,7 @@ export const ButtonComponent = () => {
   };
 
   const BackButton = () => (
-    <Tooltip title="Voltar" position={positionbottom} trigger={triggerEnter}>
+    <Tooltip position={positionbottom} trigger={triggerEnter}>
       <button onClick={handleBackButtonClick}>
         <FaAngleLeft size={20} />{" "}
       </button>
@@ -36,7 +36,7 @@ export const ButtonComponent = () => {
   );
 
   const HomeButton = () => (
-    <Tooltip title="Home" position={positionbottom} trigger={triggerEnter}>
+    <Tooltip  position={positionbottom} trigger={triggerEnter}>
       <button onClick={handleHomeButtonClick}>
         <FaHouse size={20} />{" "}
       </button>
@@ -44,7 +44,7 @@ export const ButtonComponent = () => {
   );
 
   const LoginButton = () => (
-    <Tooltip title="Login" position={positionbottom} trigger={triggerEnter}>
+    <Tooltip position={positionbottom} trigger={triggerEnter}>
       <button onClick={handleLoginButtonClick}>
         <FaUserGraduate size={20} />{" "}
       </button>

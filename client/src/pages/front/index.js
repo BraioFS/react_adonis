@@ -1,4 +1,4 @@
-/*Logos*/
+import { useState, useEffect } from "react";
 import frontHover from "../../assets/images/ts_icon.png";
 import frontInitial from "../../assets/images/ts_branco.png";
 
@@ -11,6 +11,27 @@ export default function Front() {
   const colorGreen = "var(--green)";
   const colorGray = "var(--gray-dark)";
   const colorPurple = "var(--purple)";
+
+  const [contentData, setContentData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "http://127.0.0.1:3333/find-content-by-id/1"
+        );
+        if (!response.ok) {
+          throw new Error("Não foi possível obter os dados");
+        }
+        const data = await response.json();
+        setContentData(data);
+      } catch (error) {
+        console.error("Erro ao obter dados:", error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div

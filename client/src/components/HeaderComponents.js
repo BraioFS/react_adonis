@@ -8,14 +8,13 @@ const Header = () => {
   const location = useLocation();
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Função para determinar se o cabeçalho deve ser exibido em rotas específicas
+  // Function to do not appear in specifcs routes
   const shouldShowHeader = () => {
     const pathsToHideHeader = ["/"];
     return !pathsToHideHeader.includes(location.pathname);
   };
 
   const handleClearClick = () => {
-    console.log("Aqui");
     setSearchTerm("");
     const instance = new Mark(document.body);
     instance.unmark();
@@ -26,11 +25,11 @@ const Header = () => {
   const home = <HomeButton />;
   const login = <LoginButton />;
 
-  // Função para lidar com a mudança no valor do input de pesquisa
+  // Fucntion to search
   const handleSearchChange = (event) => {
     const newSearchTerm = event.target.value;
     setSearchTerm(newSearchTerm);
-    searchOnPage(newSearchTerm); // Chama searchOnPage diretamente com o novo termo
+    searchOnPage(newSearchTerm);
   };
 
   const searchOnPage = (term) => {
@@ -40,14 +39,12 @@ const Header = () => {
     if (bodyText.includes(searchTermLowerCase)) {
       const instance = new Mark(document.body);
 
-      instance.unmark(); // Limpa marcações anteriores
+      instance.unmark();
 
       instance.mark(searchTermLowerCase, {
         ignoreJoiners: true,
         separateWordSearch: false,
       });
-    } else {
-      console.error("Termo não encontrado na página.");
     }
   };
 

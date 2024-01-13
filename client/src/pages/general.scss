@@ -7,7 +7,7 @@ $medium-font-size: 16px;
 $small-font-size: 14px;
 
 /* Fonts bold */
-$bolder-font: 700; 
+$bolder-font: 700;
 $semi-bolder-font-bold: 550;
 $medium-font-bold: 400;
 $light-font-bold: 200;
@@ -202,7 +202,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .box {
@@ -223,8 +223,14 @@ body {
 
 .grid {
   display: grid;
+  flex-direction: column;
+  align-items: center;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
+
+  > :nth-child(n + 15) {
+    margin-top: 90px;
+  }
 }
 
 img {
@@ -248,7 +254,7 @@ img {
   align-items: center;
 }
 
-.search-icon{
+.search-icon {
   margin-bottom: -2px;
   margin-left: -35px;
 }
