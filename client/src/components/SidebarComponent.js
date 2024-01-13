@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../pages/general.scss";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+import { FaAngleLeft, FaEllipsisVertical } from "react-icons/fa6";
 
 const SidebarComponent = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -19,19 +19,14 @@ const SidebarComponent = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Ícone esquerdo (fechado) */}
-      {!isSidebarOpen && (
-        <div className="icon-left">
-          <FaAngleLeft size={20} />
+      {isSidebarOpen ? (
+        <div>
+          {" "}
+          <FaAngleLeft size={20}/>
         </div>
-      )}
-
-      {/* Conteúdo da Sidebar aqui */}
-
-      {/* Ícone direito (aberto) */}
-      {isSidebarOpen && (
-        <div className="icon-right">
-          <FaAngleRight size={20} />
+      ) : (
+        <div>
+          <FaEllipsisVertical size={20} />
         </div>
       )}
     </div>
