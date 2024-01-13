@@ -20,6 +20,7 @@ $transition-fast: all ease-in-out 0.1s;
 /* box shadows */
 $box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
 $box-shadow-header: 0 5px 5px rgba(0, 0, 0, 0.15);
+$box-shadow-side: 5px 0 5px rgba(0, 0, 0, 0.15);
 
 /* Colors */
 $white-darklight: #ebebeb;
@@ -147,7 +148,7 @@ body {
   background: $white-light;
   color: $black-light;
   padding: 10px;
-  z-index: 1000;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -257,4 +258,26 @@ img {
 .search-icon {
   margin-bottom: -2px;
   margin-left: -35px;
+}
+
+.sidebar {
+  width: 20px;
+  height: 97vh;
+  background-color: inherit;
+  overflow: hidden;
+  color: $black-light;
+  transition: width $transition, background-color $transition;
+
+  &:hover {
+    width: 200px;
+    background-color: $white-light;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: $box-shadow-side;
+    border: none;
+    border-radius: $normal-border-radius;
+    z-index: 1;
+  }
 }

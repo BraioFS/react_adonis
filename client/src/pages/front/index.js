@@ -49,7 +49,7 @@ export default function Front() {
               hoverImageSource={frontHover}
               altText="html"
               title="Html"
-              to="/html-page"
+              to="/page-html"
               fontColor={colorBlack}
             />
           </div>
@@ -68,7 +68,7 @@ export default function Front() {
               initialImageSource={frontInitial}
               hoverImageSource={frontHover}
               altText="typescript"
-              title="Css"
+              title="Typescript"
               to="/typescript-page"
               fontColor={colorGray}
             />
@@ -78,7 +78,7 @@ export default function Front() {
               initialImageSource={frontInitial}
               hoverImageSource={frontHover}
               altText="javascript"
-              title="Css"
+              title="Javascript"
               to="/javascript-page"
               fontColor={colorPurple}
             />
